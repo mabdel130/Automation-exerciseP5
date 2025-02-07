@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sprint1" parallel="tests" thread-count="1" preserve-order="true">
+    <test name="Test Block 1 - HomePage and Register User">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC01_Register_User">
+                <methods>
+                    <include name="register_User_withvalidData_p"/>
+                    <include name="delete_register_User_withvalidData_p()"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="Test Block 2 - HomePage and Login with Valid Data">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Login_User_with_Valid_Data">
+                <methods>
+                    <include name="Login_User_with_correct_email_and_password_p"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test Block 3 - HomePage and Login with Invalid Data">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC03_Login_User_with_inValid_Data">
+                <methods>
+                    <include name="Login_User_with_incorrect_email_and_password_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test Block 4 - HomePage and Logout User">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC04_LogoutUser">
+                <methods>
+                    <include name="UserLogout_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test Block 5 - HomePage and Register User with existing email">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC05_RegisterUserwithexistingemail">
+                <methods>
+                    <include name="registerUserwithexistingemail_N"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Block 6 - HomePage and contactUs">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC06_ContactUS">
+                <methods>
+                    <include name="contactUs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

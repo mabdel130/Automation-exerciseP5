@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationExercise" parallel="tests" thread-count="1" preserve-order="true">
+    <parameter name="browserName" value=""/>
+    <suite-files>
+        <suite-file path="sprint1.xml"/>
+        <suite-file path="sprint2.xml"/>
+        <suite-file path="sprint3.xml"/>
+    </suite-files>
+</suite>

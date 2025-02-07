@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Combined Suite" parallel="tests" thread-count="1" preserve-order="true">
+
+    <test name="Test Block 1 - HomePage and Verify Product quantity in Cart">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General"/>
+                </methods>
+            </class>
+            <class name="testcases.TC13_ProductquantityinCart">
+                <methods>
+                    <include name="verifyProductquantityinCart_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="Test Block 2 - HomePage, Place Order, Register User, and Verify Product quantity in Cart">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General"/>
+                </methods>
+            </class>
+            <class name="testcases.TC14_PlaceOrderRegisterwhileCheckout">
+                <methods>
+                    <include name="verifyPlaceOrderstep1_P"/>
+                    <include name="verifyPlaceOrderstep2_P"/>
+                </methods>
+            </class>
+            <class name="testcases.TC01_Register_User">
+                <methods>
+                    <include name="register_User_withvalidData_p"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="RegisterbeforeCheckout">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General"/>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC01_Register_User">
+                <methods>
+                    <include name="register_User_withvalidData_p"/>
+                </methods>
+            </class>
+            <class name="testcases.TC15_RegisterbeforeCheckout">
+                <methods>
+                    <include name="registerbeforeCheckout_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login before Checkout">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <parameter name="browserName" value="chrome"/>
+                <methods>
+                    <include name="homePage_General"/>
+                    <include name="homePage_LoginandSignUP"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Login_User_with_Valid_Data">
+                <methods>
+                    <include name="Login_User_with_correct_email_and_password_p"/>
+                </methods>
+            </class>
+            <class name="testcases.TC16_LoginbeforeCheckout">
+                <methods>
+                    <include name="loginbeforeCheckout_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Delete Product from Cart">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General"/>
+                </methods>
+            </class>
+            <class name="testcases.TC17_RemoveProductsFromCart">
+                <methods>
+                    <include name="deleteProductfromcart_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sprint2" parallel="tests" thread-count="1" preserve-order="true">
+
+    <test name="Test Block 1 -HomePage and verifyTestCasesPage">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC07_TestCases">
+                <methods>
+                    <include name="verifyTestCases_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Block 2 - HomePage and Verify All Products and product detail page">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC08_AllProductsandproductdetail">
+                <methods>
+                    <include name="verifyAllProductsandproductdetail_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Block 2 - HomePage and  SearchProduct page">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC09_SearchProduct">
+                <methods>
+                    <include name="searchProducts_P()"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Block 4: HomePage and Subscription in home page">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC10_Subscriptioninhome">
+                <methods>
+                    <include name="VerifySubscriptioninhomepage_P()"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Block 4: HomePage and Subscription in cart page">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC11_Subscriptionincart">
+                <methods>
+                    <include name="VerifySubscriptionincartPage_P()"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Test Block 6: HomePage and Add Products in cart page">
+        <parameter name="browserName" value=""/>
+        <classes>
+            <class name="testcases.TC00_HomePage">
+                <methods>
+                    <include name="homePage_General()"/>
+                </methods>
+            </class>
+            <class name="testcases.TC12_AddProductsinCart">
+                <methods>
+                    <include name="addProudctsincart_P"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+</suite>
