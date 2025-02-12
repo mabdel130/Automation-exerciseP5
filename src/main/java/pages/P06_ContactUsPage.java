@@ -64,7 +64,7 @@ public class P06_ContactUsPage extends BasePage {
 
     public P06_ContactUsPage clicktoUploadfile() {
         shortWait(driver).until(ExpectedConditions.visibilityOfElementLocated(upload_file_Button))
-                .sendKeys("C:/Users/AbdELGhanyM1/Desktop/New Text Document.txt");
+                .sendKeys("file Path");
         return new P06_ContactUsPage(driver);
     }
 
