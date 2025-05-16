@@ -1,9 +1,7 @@
 package testcases;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.P17_RemoveProductsFromCartPage;
-
 import static drivers.DriverHolder.getDriver;
 import static pages.BasePage.captureScreenshot;
 import static pages.P17_RemoveProductsFromCartPage.AactualMsgremovingproduct;
