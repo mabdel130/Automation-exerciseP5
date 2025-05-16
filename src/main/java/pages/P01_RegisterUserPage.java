@@ -221,7 +221,6 @@ public class P01_RegisterUserPage extends BasePage {
         shortWait(driver).until(ExpectedConditions.visibilityOfElementLocated((deleteAccount_Button))).click();
         return new P01_RegisterUserPage(driver);
     }
-
     public P01_RegisterUserPage Verify_that_ACCOUNT_DELETED_isvisible() {
         actualMessagefor_DeletedAccount = longWait(driver).until(ExpectedConditions.visibilityOfElementLocated((assert_Delete_Account))).getText();
         return new P01_RegisterUserPage(driver);
